@@ -1,0 +1,16 @@
+{
+  "name": "fractal",
+  "description": "Build up a fractal mosaic of images.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Anton Grbin",
+    "email": "anton.grbin@gmail.com",
+    "url": "http://anton-grbin.from.hr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/agrbin/fractal.git"
+  },
+  "dependencies": {
+  }
+}

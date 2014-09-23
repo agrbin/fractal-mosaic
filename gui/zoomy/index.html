@@ -1,0 +1,30 @@
+<!doctype>
+<html>
+  <head>
+    <title>fractal-mosaic zoomy</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="Frame.js"></script>
+    <script type="text/javascript" src="FrameHolder.js"></script>
+    <script type="text/javascript" src="Screen.js"></script>
+    <script type="text/javascript" src="Array.js"></script>
+    <script type="text/javascript" src="Const.js"></script>
+    <script type="text/javascript" src="DataProvider.js"></script>
+    <script type="text/javascript" src="Ajax.js"></script>
+    <script type="text/javascript" src="Repeat.js"></script>
+    <script type="text/javascript" src="Geometry.js"></script>
+    <script type="text/javascript" src="Zoomy.js"></script>
+    <script>
+      window.addEventListener('load', function () {
+        new zz.Zoomy(
+          new zz.Screen(document.querySelector('canvas.zoomy')),
+          new zz.DataProvider(new zz.Ajax())
+        );
+      }, false);
+    </script>
+  </head>
+  <body>
+    <canvas class="zoomy">
+    </canvas>
+  </body>
+</html>
+

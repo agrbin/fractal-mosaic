@@ -1,0 +1,40 @@
+$ date; time vb --time --publicdir=/home/agrbin/public_html/download:http://v8boinc.fer.h
+
+Sat Sep 20 21:52:07 CEST 2014
+08-20 21:52:07 INFO:  --> v8boinc run
+08-20 21:52:07 INFO:  --> v8boinc test
+08-20 21:52:16 INFO:  Bundling application into one file..
+08-20 21:52:35 OK:    bundle written to .v8boinc/bundles/fractal-0.1.16/main.js
+08-20 21:52:35 INFO:  running 2 tests using --limit=2 concurrency.
+[##########################################################################] 100%
+[##########################################################################] 100%
+08-20 21:53:07 INFO:  test run completed. report follows:
+08-20 21:53:07 INFO:  ------------------------------------------
+08-20 21:53:07 OK:    test/0.in.json ok.
+08-20 21:53:07 INFO:  ------------------------------------------
+08-20 21:53:07 OK:    test/load-index.in.json ok.
+08-20 21:53:07 INFO:  ------------------------------------------
+08-20 21:53:07 INFO:  test outputs written to .v8boinc/test-results/
+08-20 21:53:07 OK:    all tests passed
+08-20 21:53:07 INFO:  --> v8boinc estimate
+08-20 21:53:07 INFO:  Bundling application into one file..
+08-20 21:53:26 INFO:  --hold is active, writing over last bundle
+08-20 21:53:26 OK:    bundle written to .v8boinc/bundles/fractal-0.1.16/main.1p.js
+08-20 21:53:26 INFO:  running 1% of bundled main with input input/0-100.in.json.gz...
+[##########################################################################] 100%
+08-20 21:53:59 INFO:  estimate running time is 2209s
+08-20 21:53:59 INFO:  WARN: estimated fpops too large. use workload between 2e9 and 1e11 for best results
+08-20 21:53:59 INFO:  estimated workload is 176700000000 floating point ops
+08-20 21:53:59 OK:    required estimated number of operations written to app.json
+08-20 21:53:59 INFO:  656 tasks to submit...
+[##########################################################################] 100%
+08-20 22:20:36 OK:    656 tasks submitted.
+08-20 22:20:36 INFO:  waiting for task results...
+[##########################################################################] 100%
+08-21 05:13:22 OK:    656 tasks completed.
+08-21 05:13:22 INFO:  look in output/ for results.
+08-21 05:13:22 OK:    looks like everything went just fine.
+
+real    441m16.025s
+user    11m54.089s
+sys     2m19.825s

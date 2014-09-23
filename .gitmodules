@@ -1,0 +1,3 @@
+[submodule "lib/external/flann.js"]
+	path = lib/external/flann.js
+	url = git://github.com/agrbin/flann.js

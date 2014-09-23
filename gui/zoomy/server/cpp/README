@@ -1,0 +1,11 @@
+download libjpeg-turbo-1.3.1.tar.gz
+
+(not direct link:)
+http://sourceforge.net/projects/libjpeg-turbo/files/1.3.1/libjpeg-turbo-1.3.1.tar.gz/download
+
+extract
+
+./configure --with-jpeg8 --prefix=$HOME/install/
+make -j$(nproc) install
+
+
