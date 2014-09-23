@@ -1,6 +1,0 @@
-{
-  "name": "zoomy-gui",
-  "dependencies": {
-    "async": "^0.9.0"
-  }
-}

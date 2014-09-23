@@ -1,8 +1,0 @@
-{
-  "created": "Wed Sep 17 2014 19:33:22 GMT+0200 (CEST)",
-  "root-dir": "/home/agrbin/code/fractal-mosaic/tiler",
-  "version": "0.1.20",
-  "name": "fractal",
-  "estimated-fpops": 400000000,
-  "gzipped": true
-}
