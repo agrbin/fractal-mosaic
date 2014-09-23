@@ -5,11 +5,6 @@ var spawn = require('child_process').spawn,
   provider = require('./provider.js'),
   flattenArray = require('./array.js').flattenArray;
 
-function error(res, msg) {
-  res.statusCode = 400;
-  res.end("error: " + msg.toString());
-}
-
 module.exports = function (imageIds, res) {
   var n = imageIds.length,
     m = imageIds[0].length,
