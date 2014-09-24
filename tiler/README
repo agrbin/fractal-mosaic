@@ -1,0 +1,20 @@
+to run or test this you need to have:
+
+  node
+  npm
+  git submodule init
+  git submodule update
+  sudo npm install -g v8boinc-remote
+  v8boinc init
+
+and then you can do:
+
+  v8boinc test
+
+if you want to run the inputs against v8boinc server, you need to get account
+on a v8boinc server and then
+
+  v8boinc auth (SERVER) (AUTHENTICATOR)
+  v8boinc run
+
+
