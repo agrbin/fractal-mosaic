@@ -1,5 +1,5 @@
 var spawn = require('child_process').spawn,
-  fs = require('fs'),
+  fs = require('graceful-fs'),
   path = require('path'),
   config = require('./config.js'),
   provider = require('./provider.js'),

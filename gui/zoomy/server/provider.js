@@ -1,6 +1,6 @@
 var config = require('./config.js'),
   collateArray = require('./array.js').collateArray,
-  fs = require('fs');
+  fs = require('graceful-fs');
 
 function getImageMosaic(id, done) {
   var file = config.mosaicDir + id + ".mosaic.json";

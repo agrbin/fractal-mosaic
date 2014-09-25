@@ -1,18 +1,20 @@
-var fs = require("fs"),
+var fs = require("graceful-fs"),
   getImageMosaic = require("./provider.js").getImageMosaic,
   emptyArray = require("./array.js").emptyArray,
   path = require('path'),
   montage = require("./montage.js"),
   flattenArray = require("./array.js").flattenArray,
   explodeArray = require("./array.js").explodeArray,
-  async = require("async");
+  async = require("async"),
+  config = require("./config"),
+  appQ = async.queue(appWorker, config.concurrency);
 
 require('http')
   .createServer(handleRequest)
-  .listen(8080);
+  .listen(8080, '127.0.0.1');
 
-function error(res, msg) {
-  res.statusCode = 400;
+function error(res, msg, status) {
+  res.statusCode = status || 400;
   res.end("error: " + msg.toString());
 }
 
@@ -44,7 +46,9 @@ function spitImage(id, f, mx, my, res) {
   });
 }
 
-function handleRequest(req, res) {
+function appWorker(task, callback) {
+  var req = task.req, res = task.res;
+  res.on('finish', callback.bind(null, null));
   if (req.url.indexOf('?nocache') > 0) {
     req.url = req.url.substr(0, req.url.length - '?nocache'.length);
   }
@@ -72,5 +76,21 @@ function handleRequest(req, res) {
     });
   }
   error(res, 'wrong input params');
+}
+
+function handleRequest(req, res) {
+  if (req.url.match(/favicon/)) {
+    error(res, 'fnf', 404);
+  } else if (appQ.length() >= config.queueLimit) {
+    console.log('queue.length() >= config.queueLimit');
+    error(res, 'too crowded', 503);
+  } else {
+    var t = new Date().getTime();
+    appQ.push({req:req, res:res}, function () {
+      console.log(req.url, res.statusCode,
+        new Date().getTime() - t ,"ms, current queue length:",
+        appQ.length());
+    });
+  }
 }
 

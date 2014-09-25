@@ -1,6 +1,7 @@
 {
   "name": "zoomy-gui",
   "dependencies": {
-    "async": "^0.9.0"
+    "async": "^0.9.0",
+    "graceful-fs": "^3.0.2"
   }
 }
