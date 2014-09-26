@@ -29,7 +29,7 @@ module.exports = function (imageIds, res) {
 
   res.writeHead(200, {
     'Content-Type': 'image/jpeg',
-    'Cache-control': 'public,max-age=3000,s-maxage=9000',
+    'Cache-control': config.cacheControl,
   });
 
   child.stdout.pipe(res);

@@ -10,4 +10,7 @@ module.exports = {
   kCols : 32,
   kWidth : 256,
   kHeight : 144,
+
+  cacheControl : "public,max-age=31536000,s-maxage=31536000",
+
 };

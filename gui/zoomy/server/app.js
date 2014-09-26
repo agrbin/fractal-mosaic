@@ -70,7 +70,7 @@ function appWorker(task, callback) {
       }
       res.writeHead(200, {
         'Content-Type': 'application/json',
-        'Cache-control': 'public,max-age=3000,s-maxage=9000',
+        'Cache-control': config.cacheControl,
       });
       res.end(JSON.stringify(result));
     });
