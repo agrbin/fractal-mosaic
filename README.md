@@ -27,7 +27,7 @@ mosaic would be to test all of the `N^(K^2)` compositions. Independence of sub
 problems comes to the rescue - we can choose the closest image for each of `K^2`
 subpictures and then compose results into a mosaic. In order to find closest
 image for one subpicture one can flatten image to a vector and then search for
-nearest neighbours in that vector space.  This turns a mosaic problem into a
+nearest neighbors in that vector space.  This turns a mosaic problem into a
 `K^2` evaluations of closest neighbor queries.
 
 Before we square the complexity of a mosaic problem, we note how this approach
@@ -41,11 +41,11 @@ in the matrix are iterated in random order and closest candidate from list is
 assigned. When candidate is assigned, all instances of same candidate in
 neighboring slots gets penalty inverse proportional to distance. This approach
 yielded best results with small computational overhead and the algorithm is
-inspired from kohonen's neural network.
+inspired from Kohonen's neural network.
 
 To sum up the simple mosaic algorithm we use `B` for fixed image, `B_i,j` for
 subpicture of `B` in row `i + 1` and column `j + 1`, and `D` for database set
-od images.
+of images.
 
     for (i,j) < K in parallel
       candidates[i,j] = k-nearest-images to (B_i,j) in D
@@ -116,8 +116,8 @@ referent big image `ID` and by encoding a smaller subimage from it:
 
 For example, whole area of a `fractal(10)` would be encoded as `10-32-0-0`,
 while it's upper right quadrant would be `10-16-0-16`. Smallest bottom right
-subimage would be encoded as `10-1-31-31` which is equivalent to
-`mosaic[10][32, 32]-32-0-0`.
+subimage could be encoded as `10-1-31-31` but that is equivalent to
+`mosaic[10][31, 31]-32-0-0`.
 
 If large image has resolution `WxH`, small image encoded with `k, mx, my` would
 span the area from corner point `mx W / K, my H / K` of size `k W / K, k H / K`.
