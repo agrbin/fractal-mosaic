@@ -15,7 +15,7 @@ zz.kRows = 2;
 zz.kCols = 2; 
 
 zz.viewMargin = 0.1;
-zz.zoomSpeed = 0.00008;
+zz.zoomSpeed = 0.0001;
 
 zz.drawImages = true;
 zz.drawGrid = false;
