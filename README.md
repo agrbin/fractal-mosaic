@@ -1,8 +1,6 @@
 fractal-mosaic
 ==============
 
-**Ooops .. the following demo is currently down:**
-
 Endless zoom. Check it out! <http://agrbin.github.io/fractal-mosaic/>
 
 What is the animation you can see in this visualization? There are some images
