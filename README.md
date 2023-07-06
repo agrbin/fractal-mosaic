@@ -1,7 +1,7 @@
 fractal-mosaic
 ==============
 
-Endless zoom. Check it out! <http://agrbin.github.io/fractal-mosaic/>
+Endless zoom. Check it out! <https://agrbin.github.io/fractal-mosaic/>
 
 What is the animation you can see in this visualization? There are some images
 and they keep zooming in. Each image is then turned into a mosaic of other
