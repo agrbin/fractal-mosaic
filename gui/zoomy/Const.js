@@ -3,7 +3,7 @@
 
 var zz = zz || {};
 
-zz.kApiUrl = 'http://fractal-mosaic.xfer.hr/';
+zz.kApiUrl = 'https://fractal-mosaic.fitmarket.life/';
 
 zz.kWidth = 1024 * 4;
 zz.kHeight = 576 * 4;
